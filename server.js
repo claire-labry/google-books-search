@@ -1,22 +1,26 @@
 const express = require('express');
-const path = require('path');
-const PORT = process.env.PORT || 3001;
+
+const mongoose = require('mongoose');
+const routes = require('./routes');
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Define middleware
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serves static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
 // API routes
+app.use(routes);
 
-// Send every other request to the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
+// Connect to Mongoose
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
+  useNewUrlParser: true,
 });
 
 app.listen(PORT, () => {
