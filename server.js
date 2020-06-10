@@ -1,5 +1,4 @@
 const express = require('express');
-
 const mongoose = require('mongoose');
 const routes = require('./routes');
 const app = express();
@@ -18,7 +17,6 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes);
 
 // Connect to Mongoose
-
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
   useNewUrlParser: true,
 });
