@@ -1,0 +1,5 @@
+.tile {
+  display: flex;
+  width: 50%;
+  position: relative;
+}
