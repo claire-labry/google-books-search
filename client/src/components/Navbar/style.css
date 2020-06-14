@@ -1,0 +1,15 @@
+.navbar {
+  background-color: black;
+  padding: 1.5rem;
+}
+
+.links {
+  display: flex;
+  margin-left: auto;
+}
+
+h6 {
+  margin-left: 20px;
+  color: white;
+  font-size: 18px;
+}
