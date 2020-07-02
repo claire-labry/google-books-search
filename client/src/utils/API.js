@@ -7,7 +7,7 @@ export default {
   },
 
   getBooks: () => {
-    return axios.get('api/books');
+    return axios.get('/api/books');
   },
 
   saveBook: (data) => {
@@ -18,7 +18,7 @@ export default {
     return axios.delete(`/api/books/${id}`);
   },
 
-  updateBook: (id, status) => {
-    return axios.put(`/api/books/${id}`, status);
+  getBook: (id) => {
+    return axios.put(`/api/books/${id}`);
   },
 };

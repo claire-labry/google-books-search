@@ -4,16 +4,37 @@ import './style.css';
 
 function Navbar() {
   return (
-    <div className='navbar'>
-      <div className='links'>
-        <h6>
-          <Link to='/'>Home</Link>
-        </h6>
-        <h6>
-          <Link to='/saved'>Saved</Link>
-        </h6>
+    <nav className='navbar' role='navigation' aria-label='main navigation'>
+      <div className='navbar-brand'>
+        <Link to='/'>Google Books</Link>
+        <div className='navbar-end'>
+          <span className='navbar-item'>
+            <Link
+              to='/search'
+              className={
+                window.location.pathname === '/search'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              Search
+            </Link>
+          </span>
+          <span className='navbar-item'>
+            <Link
+              to='/saved'
+              className={
+                window.location.pathname === '/saved'
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              Saved
+            </Link>
+          </span>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

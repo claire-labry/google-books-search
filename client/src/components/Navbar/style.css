@@ -1,15 +1,19 @@
 .navbar {
-  background-color: black;
-  padding: 1.5rem;
+  background-color: #6583bf;
+  padding: 10px;
 }
 
-.links {
-  display: flex;
-  margin-left: auto;
+a {
+  text-decoration: none;
+  color: #f2c9d1;
+  margin: auto;
+  font-size: 20px;
+}
+a:hover {
+  text-decoration: none;
+  color: #f28379;
 }
 
-h6 {
-  margin-left: 20px;
-  color: white;
-  font-size: 18px;
+.nav-item {
+  font-size: 25px;
 }
