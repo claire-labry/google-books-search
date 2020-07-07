@@ -3,9 +3,7 @@ import API from '../utils/API'
 import Wrapper from '../components/Wrapper';
 import Form from '../components/Form';
 import Results from '../components/Results'
-
-
-
+import './search.css'
 
 
 class Search extends Component {
@@ -33,7 +31,7 @@ class Search extends Component {
             let results = response.data.items;
 
             results = results.map(result => {
-                result ={
+                result = {
                     id: result.id, 
                     title:result.volumeInfo.title, 
                     author: result.volumeInfo.authors, 
@@ -48,8 +46,8 @@ class Search extends Component {
     }
     render() {
         return(
-            <Wrapper> 
-                <h1> Search 'n Save Your Favorite Books!</h1>
+            <>
+                <h1 className='searchsave'> Search 'n Save Your Favorite Books!</h1>
     
                 <Form 
                 handleChange={this.handleChange}
@@ -61,9 +59,9 @@ class Search extends Component {
                         <Results books={this.state.books} savedBooks={this.savedBooks} /> 
                     </div>
                 ) : (
-                    <h3>No Results Matched Your Search</h3>
+                    <h3 className='noresults'>No Results Yet</h3>
                 )}
-            </Wrapper>
+            </>
         )
     }
 }

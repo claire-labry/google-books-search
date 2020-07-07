@@ -1,32 +1,27 @@
-import React from 'react';
+import React from 'react'
+import './style.css'
 
 function Form(props) {
   return (
     <div>
       <form>
         <div>
-          <label htmlFor='search'>
-            <h2>Search 'n Save Your Books</h2>
-          </label>
           <input
             onChange={props.handleChange}
             value={props.search}
             name='search'
             type='text'
-            className='search'
-            placeholder='Search a Book'
+            className='input'
+            placeholder='search for your book...'
             id='search'
           />
-          <button
-            onClick={props.handleSearch}
-            className='button'
-          >
+          <button onClick={props.handleSearch} className='button'>
             Search
           </button>
         </div>
       </form>
     </div>
-  );
+  )
 }
 
-export default Form;
+export default Form

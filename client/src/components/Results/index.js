@@ -1,26 +1,36 @@
-import React from 'react';
-const Result = (props) =>{
+import React from 'react'
+import './style.css'
 
-  return(
+const Result = (props) => {
+  return (
     <div>
-      {props.books.map((book)=>{
-        return(
+      {props.books.map((book) => {
+        return (
           <div key={book.id}>
-            <div>
-              <div id='pic'>
+            <div className='card'>
+              <div class='card-image'>
+              <figure class="image is-200by200">
                 <img src={book.image} alt={book.title} />
-                <p>{book.title}</p>
-                <p>by:{book.author}</p>
-                <div>
-                  <button type='button' id={book.id} onClick={event=>props.saveBook(event)}> Save Your Book!</button>
-                </div>
-                <div>
-                  <a href={book.link} rel="noopener noreferrer" target='_blank'>
-                    <button type='button'>More Info</button>
-                  </a>
-                </div>
+                </figure>
               </div>
-              <div>{book.description}</div>
+              <p>{book.title}</p>
+              <p>by: {book.author}</p>
+              <div className='content'>{book.description}</div>
+              <div>
+                <button
+                  type='button'
+                  className='button'
+                  id={book.id}
+                  onClick={(event) => props.saveBook(event)}
+                >
+                  Save
+                </button>
+                <a href={book.link} rel='noopener noreferrer' target='_blank'>
+                  <button type='button' className='button'>
+                    Google Book
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         )

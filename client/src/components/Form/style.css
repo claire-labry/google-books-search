@@ -1,0 +1,13 @@
+#search{
+    margin: 10px;
+    padding: 5px;
+    width: 300px;
+}
+
+.button{
+    background-color: #6583bf;
+    margin: auto;
+}
+.button:hover{
+    color: #f28379;
+}

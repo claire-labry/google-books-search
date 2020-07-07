@@ -18,11 +18,11 @@ const Save= (props) =>{
                 </div>
                 <div>
                   <a href={saved.link} rel="noopener noreferrer" target='_blank'>
-                    <button type='button'>More Info</button>
+                    <button type='button'>Google Book</button>
                   </a>
                 </div>
               </div>
-              <div>{saved.description}</div>
+              <div className='description'>{saved.description}</div>
             </div>
           </div>
         )
