@@ -9,9 +9,7 @@ const Result = (props) => {
           <div key={book.id}>
             <div className='card'>
               <div class='card-image'>
-              <figure class="image is-200by200">
                 <img src={book.image} alt={book.title} />
-                </figure>
               </div>
               <p>{book.title}</p>
               <p>by: {book.author}</p>
@@ -27,7 +25,7 @@ const Result = (props) => {
                 </button>
                 <a href={book.link} rel='noopener noreferrer' target='_blank'>
                   <button type='button' className='button'>
-                    Google Book
+                    More info
                   </button>
                 </a>
               </div>

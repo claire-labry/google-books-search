@@ -37,7 +37,7 @@ class Search extends Component {
                     author: result.volumeInfo.authors, 
                     description: result.volumeInfo.description,
                     link: result.volumeInfo.infoLink, 
-                    image: result.volumeInfo.imageLinks.large,
+                    image: result.volumeInfo.imageLinks.thumbnail
                 }
                 return result;
             })
