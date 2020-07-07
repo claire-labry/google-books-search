@@ -12,13 +12,15 @@ const bookSchema = new Schema({
   },
   description: {
     type: String,
-    required: true,
+    required: false,
   },
   image: {
     type: String,
+    required: false,
   },
   link: {
     type: String,
+    required: false,
   },
   date: {
     type: Date,
@@ -26,6 +28,6 @@ const bookSchema = new Schema({
   },
 });
 
-const Book = mongoose.model('book', bookSchema);
+const Book = mongoose.model('Book', bookSchema);
 
 module.exports = Book;

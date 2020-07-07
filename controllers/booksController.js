@@ -5,31 +5,38 @@ const db = require('../models');
 module.exports = {
   // finds + displays the books
   findAll: (req, res) => {
-    console.log(req.body);
-    db.Book.find()
+    // console.log(req.body);
+    db.Book.find(req.query)
       .sort({ date: -1 })
-      .then((data) => res.json(data))
+      .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
 
   // add new books into the database
   create: (req, res) => {
     db.Book.create(req.body)
-      .then((data) => res.json(data))
+      .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
 
   // removes books from the database
   remove: (res, req) => {
-    db.Book.remove(req.body)
-      .then((data) => res.json(data))
+    db.Book.findById({ _id: req.params.id })
+      .then((dbModel) => dbModel.remove())
+      .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
 
   // updates books in the database
   update: (res, req) => {
-    db.Book.update({ _id: req.params.id }, { status: req.body.status })
-      .then((data) => res.json(data))
+    db.Book.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
+
+  findById: (res, req) => {
+    db.Book.findById(req.params.id)
+      .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
 };
