@@ -12,10 +12,10 @@ const Result = (props) =>{
                 <p>{book.title}</p>
                 <p>by:{book.author}</p>
                 <div>
-                  <button type='button' id={book.id} onClick={event=props.saveBook(event)}> Save Your Book!</button>
+                  <button type='button' id={book.id} onClick={event=>props.saveBook(event)}> Save Your Book!</button>
                 </div>
                 <div>
-                  <a href={book.link} target='_blank'>
+                  <a href={book.link} rel="noopener noreferrer" target='_blank'>
                     <button type='button'>More Info</button>
                   </a>
                 </div>

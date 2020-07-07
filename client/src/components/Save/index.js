@@ -14,10 +14,10 @@ const Save= (props) =>{
                 <p>{saved.title}</p>
                 <p>by:{saved.author}</p>
                 <div>
-                  <button type='button' id={book.id} onClick={() => props.deleteBook(saved._id)}> Delete</button>
+                  <button type='button' id={saved.id} onClick={() => props.deleteBook(saved._id)}> Delete</button>
                 </div>
                 <div>
-                  <a href={saved.link} target='_blank'>
+                  <a href={saved.link} rel="noopener noreferrer" target='_blank'>
                     <button type='button'>More Info</button>
                   </a>
                 </div>

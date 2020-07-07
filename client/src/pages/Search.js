@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
 import API from '../utils/API'
+import Wrapper from '../components/Wrapper';
+import Form from '../components/Form';
+import Results from '../components/Results'
+
 
 
 
@@ -17,6 +21,10 @@ class Search extends Component {
 
     savedBooks = event => {
         event.preventDefault();
+
+        let data = this.state.books.filter(book=> book.id === event.target.id)
+        data=data[0];
+        API.saveBook(data).then(alert('Your Book Has been Saved!')).catch(err => console.log(err));
     };
 
     handleSearch = (event) => {
@@ -38,6 +46,26 @@ class Search extends Component {
             this.setState({books: results})
         }).catch(err => console.log(err));
     }
+    render() {
+        return(
+            <Wrapper> 
+                <h1> Search 'n Save Your Favorite Books!</h1>
+    
+                <Form 
+                handleChange={this.handleChange}
+                handleSearch={this.handleSearch}
+                />
+                {this.state.books.length ? (
+                    <div>
+                        <h3>Your Search Results</h3>
+                        <Results books={this.state.books} savedBooks={this.savedBooks} /> 
+                    </div>
+                ) : (
+                    <h3>No Results Matched Your Search</h3>
+                )}
+            </Wrapper>
+        )
+    }
 }
 
-export default Search
+export default Search;
