@@ -19,7 +19,7 @@ class Search extends Component {
         event.preventDefault();
     };
 
-    handleSubmit = (event) => {
+    handleSearch = (event) => {
         event.preventDefault();
         API.searchBook(this.state.query).then(response => {
             let results = response.data.items;

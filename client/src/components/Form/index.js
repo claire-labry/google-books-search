@@ -18,7 +18,7 @@ function Form(props) {
             id='search'
           />
           <button
-            onClick={props.handleSubmit}
+            onClick={props.handleSearch}
             className='button'
           >
             Search
