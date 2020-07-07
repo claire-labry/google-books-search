@@ -10,15 +10,15 @@ export default {
     return axios.get('/api/books');
   },
 
-  saveBook: (data) => {
-    return axios.post('/api/books', data);
+  saveBook: (savedData) => {
+    return axios.post('/api/books', savedData);
   },
 
   deleteBook: (id) => {
-    return axios.delete(`/api/books/${id}`);
+    return axios.delete('/api/books/' + id);
   },
 
   getBook: (id) => {
-    return axios.put(`/api/books/${id}`);
+    return axios.put('/api/books/' + id);
   },
 };

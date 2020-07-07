@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import API from '../utils/API'
-import Wrapper from '../components/Wrapper';
 import Form from '../components/Form';
 import Results from '../components/Results'
 import './search.css'
@@ -17,12 +16,12 @@ class Search extends Component {
         this.setState({query})
     };
 
-    savedBooks = event => {
+    saveBooks = event => {
         event.preventDefault();
 
-        let data = this.state.books.filter(book=> book.id === event.target.id)
-        data=data[0];
-        API.saveBook(data).then(alert('Your Book Has been Saved!')).catch(err => console.log(err));
+        let saveData = this.state.books.filter(book=> book.id === event.target.id)
+        saveData=saveData[0];
+        API.saveBook(saveData).then(alert('Your Book Has been Saved!')).catch(err => console.log(err));
     };
 
     handleSearch = (event) => {
@@ -55,8 +54,8 @@ class Search extends Component {
                 />
                 {this.state.books.length ? (
                     <div>
-                        <h3>Your Search Results</h3>
-                        <Results books={this.state.books} savedBooks={this.savedBooks} /> 
+                        <h3 className='searchsave'>Your Search Results</h3>
+                        <Results books={this.state.books} saveBooks={this.saveBooks} /> 
                     </div>
                 ) : (
                     <h3 className='noresults'>No Results Yet</h3>

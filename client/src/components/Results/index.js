@@ -1,14 +1,16 @@
 import React from 'react'
 import './style.css'
 
+
 const Result = (props) => {
+
   return (
     <div>
       {props.books.map((book) => {
         return (
           <div key={book.id}>
             <div className='card'>
-              <div class='card-image'>
+              <div className='card-image'>
                 <img src={book.image} alt={book.title} />
               </div>
               <p>{book.title}</p>
@@ -19,8 +21,7 @@ const Result = (props) => {
                   type='button'
                   className='button'
                   id={book.id}
-                  onClick={(event) => props.saveBook(event)}
-                >
+                  onClick={event => props.saveBooks(event)}>
                   Save
                 </button>
                 <a href={book.link} rel='noopener noreferrer' target='_blank'>
