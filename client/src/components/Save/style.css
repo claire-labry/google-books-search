@@ -1,0 +1,18 @@
+
+.card{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.button{
+    background-color: #6583bf;
+    margin: 5px;
+}
+.button:hover{
+    color: #f28379;
+}
+
+.content{
+    padding: 5px;
+}
