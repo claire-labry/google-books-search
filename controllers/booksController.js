@@ -20,7 +20,7 @@ module.exports = {
   },
 
   // removes books from the database
-  remove: (res, req) => {
+  remove: (req, res) => {
     db.Book.findById({ _id: req.params.id })
       .then((dbModel) => dbModel.remove())
       .then((dbModel) => res.json(dbModel))
@@ -28,13 +28,13 @@ module.exports = {
   },
 
   // updates books in the database
-  update: (res, req) => {
+  update: (req, res) => {
     db.Book.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
 
-  findById: (res, req) => {
+  findById: (req, res) => {
     db.Book.findById(req.params.id)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
