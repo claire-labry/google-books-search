@@ -33,7 +33,7 @@ class Search extends Component {
                 result = {
                     id: result.id, 
                     title:result.volumeInfo.title, 
-                    author: result.volumeInfo.authors, 
+                    authors: result.volumeInfo.authors, 
                     description: result.volumeInfo.description,
                     link: result.volumeInfo.infoLink, 
                     image: result.volumeInfo.imageLinks.thumbnail

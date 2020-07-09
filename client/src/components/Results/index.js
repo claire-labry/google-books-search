@@ -14,7 +14,7 @@ const Result = (props) => {
                 <img src={book.image} alt={book.title} />
               </div>
               <p>{book.title}</p>
-              <p>by: {book.author}</p>
+              <p>by: {book.authors}</p>
               <div className='content'>{book.description}</div>
               <div>
                 <button
