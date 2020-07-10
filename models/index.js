@@ -1,3 +1,5 @@
 module.exports = {
-  Book: require('./Book'),
+  Book: require('./book'),
 };
+
+// this references (B)book.js in the same file
