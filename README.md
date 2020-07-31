@@ -4,7 +4,7 @@ This is a full MERN Stack application where a user can go in and search a book t
 
 ## Deployed Link
 
-https://agile-ocean-69913.herokuapp.com/
+https://googlebookscsl.herokuapp.com/
 
 ## How to Use
 
