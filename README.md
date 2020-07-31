@@ -10,20 +10,26 @@ https://googlebookscsl.herokuapp.com/
 
 Download the repository to your local computer and npm install all of the required packages. Run `npm start` in your terminal and you be automatically redirected to a new page where you will be able to search for your book. 
 
+The first screen you see when you upload this MERN application. If you hit refresh, a new book quote will appear. 
+
+![](img/frontscreen)
+
+This shows a book being searched
+
 ![](img/booksearch.png)
 
-### Alert that tells user that their book has been successfully saved
+ Alert that tells user that their book has been successfully saved
 
 ![](img/saved.png)
 
-### User can click on the 'saved' tab and find their books there. Users can delete or google further on the book. 
+ User can click on the 'saved' tab and find their books there. Users can delete or google further on the book. 
 
 ![](img/savedbooks.png)
 
 ## Technologies Used
 
 - MongoDB / Mongoose
-- Express.js 
+- Express.js
 - React.js
 - Node.js
 - Axios 
