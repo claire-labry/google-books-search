@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import API from '../utils/API'
+import FlexContainer from '../components/FlexContainer'
 import Form from '../components/Form';
 import Results from '../components/Results'
 import './search.css'
@@ -46,8 +47,7 @@ class Search extends Component {
     render() {
         return(
             <>
-                <h1 className='searchsave'> Search 'n Save Your Favorite Books!</h1>
-    
+            <FlexContainer>
                 <Form 
                 handleChange={this.handleChange}
                 handleSearch={this.handleSearch}
@@ -60,6 +60,7 @@ class Search extends Component {
                 ) : (
                     <h3 className='noresults'>No Results Yet</h3>
                 )}
+                </FlexContainer>
             </>
         )
     }

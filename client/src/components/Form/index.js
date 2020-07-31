@@ -4,7 +4,7 @@ import './style.css'
 function Form(props) {
   return (
     <div>
-      <form>
+      <form className='form'>
         <div>
           <input
             onChange={props.handleChange}
@@ -15,7 +15,7 @@ function Form(props) {
             placeholder='search for your book...'
             id='search'
           />
-          <button onClick={props.handleSearch} className='button'>
+          <button onClick={props.handleSearch} className='search-button'>
             Search
           </button>
         </div>
