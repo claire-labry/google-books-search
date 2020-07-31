@@ -12,7 +12,7 @@ Download the repository to your local computer and npm install all of the requir
 
 The first screen you see when you upload this MERN application. If you hit refresh, a new book quote will appear. 
 
-![](img/frontscreen)
+![](img/frontscreen.png)
 
 This shows a book being searched
 
