@@ -29,6 +29,11 @@ const Result = (props) => {
                     More info
                   </button>
                 </a>
+                <a rel='noopener noreferrer' target='_blank'>
+                  <button type='button' className='resultsbutton'>
+                    I've read this book!
+                  </button>
+                </a>
               </div>
             </div>
           </div>

@@ -27,3 +27,7 @@ Download the repository to your local computer and npm install all of the requir
 - React.js
 - Node.js
 - Axios 
+
+## Future Developments 
+
+- Create a 'I've Read this Book' section

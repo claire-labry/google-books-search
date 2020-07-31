@@ -24,6 +24,15 @@ class Search extends Component {
         API.saveBook(data).then(alert('Your book has been saved!')).catch(err => console.log(err));
     };
 
+    readBooks = event => {
+        event.preventDefault();
+
+        let data = this.state.books.filter(book=> book.id === event.target.id)
+        data=data[0];
+        API.saveBook(data).then(alert('You\'ve read this book! It has been saved to the search page. You can delete it at any time')).catch(err => console.log(err));
+    };
+
+
     handleSearch = (event) => {
         event.preventDefault();
         API.searchBook(this.state.query).then(response => {
@@ -32,7 +41,7 @@ class Search extends Component {
             results = results.map(result => {
                 result = {
                     id: result.id, 
-                    title:result.volumeInfo.title, 
+                    title: result.volumeInfo.title, 
                     authors: result.volumeInfo.authors, 
                     description: result.volumeInfo.description,
                     link: result.volumeInfo.infoLink, 
@@ -56,7 +65,7 @@ class Search extends Component {
                         <Results books={this.state.books} saveBooks={this.saveBooks} /> 
                     </div>
                 ) : (
-                    <h3 className='noresults'>No Results Yet</h3>
+                    <h3 className='searchsave'>no books have been searched yet!</h3>
                 )}
             </>
         )
