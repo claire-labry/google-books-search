@@ -28,10 +28,10 @@ class Saved extends Component {
   render() {
     return (
       <Wrapper>
-        <h1 className='searchsave'>Saved Books</h1>
 
         {this.state.data.length ? (
           <div>
+            <h1 className='searchsave'>Saved Books</h1>
             <Save data={this.state.data} deleteBook={this.deleteBook} />
           </div>
         ) : (
