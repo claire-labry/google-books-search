@@ -14,7 +14,7 @@ const Save= (props) =>{
                 <img src={saved.image} alt={saved.title} />
                 </div>
                 <p>{saved.title}</p>
-                <p>by:{saved.authors}</p>
+                <p>by: {saved.authors}</p>
                 <div className='description'>{saved.description}</div>
                 <div>
                   <button type='button' className='buttons' id={saved.id} onClick={() => props.deleteBook(saved._id)}> Delete</button>
