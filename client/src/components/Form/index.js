@@ -12,7 +12,7 @@ function Form(props) {
             name='search'
             type='text'
             className='input'
-            placeholder='search for your book...'
+            placeholder='search for a book, author...'
             id='search'
           />
           <button onClick={props.handleSearch} className='search-button'>

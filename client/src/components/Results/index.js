@@ -19,13 +19,13 @@ const Result = (props) => {
               <div>
                 <button
                   type='button'
-                  className='button'
+                  className='resultsbutton'
                   id={book.id}
                   onClick={event => props.saveBooks(event)}>
                   Save
                 </button>
                 <a href={book.link} rel='noopener noreferrer' target='_blank'>
-                  <button type='button' className='button'>
+                  <button type='button' className='resultsbutton'>
                     More info
                   </button>
                 </a>

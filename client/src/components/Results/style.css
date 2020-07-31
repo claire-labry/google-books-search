@@ -1,18 +1,20 @@
-
-.card{
-    margin: 10px;
-    padding: 20px;
-    border-radius: 30px;
+.card {
+  font-family: 'Quicksand', sans-serif;
 }
 
-.button{
-    background-color: #6583bf;
-    margin: 5px;
-}
-.button:hover{
-    color: #f28379;
+.resultsbutton {
+  letter-spacing: 0.25em;
+  color: black;
+  background-color: #f2d194;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.content{
-    padding: 5px;
+.content {
+  padding: 5px;
 }

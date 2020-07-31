@@ -5,9 +5,10 @@
 }
 
 .booksoul{
-  color: white;
   font-size: 18px;
-  background-color: black;
+  letter-spacing: .25em;
+  color: black;
+  background-color:#F2D194;
   padding: 10px;
   border-radius: 5px;
   font-family: 'Quicksand', sans-serif;
@@ -15,16 +16,25 @@
 
 .nav-link{
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  background-color: black;
+  letter-spacing: .25em;
+  color: black;
+  background-color:#F2D194;
   font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
   padding: 10px;
+  outline: none;
+  border: 0;
   border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 var(--border-size)
+  currentcolor;
+  transition: background .8s ease;
 }
 
 a:hover {
   text-decoration: none;
-  color:#8C4272;
+  background: #91AA9D;
+  color:black;
 }
 
