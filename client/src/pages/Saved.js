@@ -35,7 +35,7 @@ class Saved extends Component {
             <Save data={this.state.data} deleteBook={this.deleteBook} />
           </div>
         ) : (
-          <h2 className='searchsave'>No Saved Books Yet!</h2>
+          <h2 className='searchsave'>No Saved Books Yet! Try searching for books + saving them.</h2>
         )}
       </Wrapper>
     )
